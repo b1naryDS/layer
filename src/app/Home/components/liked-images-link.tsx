@@ -12,7 +12,7 @@ export default function LikedImagesLink() {
               {likedImagesCount}
             </p>
           </div>
-          {HeartIcon()}
+          <HeartIcon />
         </div>
       </div>
     </a>
