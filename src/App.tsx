@@ -1,14 +1,16 @@
-import './App.css'
+import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './app/Home/page';
+import LikedImages from './app/LikedImages/page';
 
-function App() {
-
+export const App: React.FC = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-          Hello world!
-      </h1>
-    </>
-  )
-}
-
-export default App
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/liked" element={<LikedImages />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
