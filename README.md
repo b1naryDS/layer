@@ -22,6 +22,8 @@ src/
   │   ├── icons/
   │   │   ├── expand-icon.tsx
   │   │   ├── like-icon.tsx
+  │   │   ├── search-icon.tsx
+  │   │   ├── home-icon.tsx
   │   │   └── unlike-icon.tsx
   │   ├── ui/
   │   │   ├── input.tsx

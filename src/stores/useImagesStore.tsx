@@ -15,6 +15,7 @@ interface ImagesState {
   resetImages: () => void;
   likeImage: (image: PixabayImage) => void;
   unlikeImage: (image: PixabayImage) => void;
+  isImageLiked: (imageId: number) => boolean;
 }
 
 export const useImagesStore = create<ImagesState>((set, get) => ({
@@ -76,7 +77,9 @@ export const useImagesStore = create<ImagesState>((set, get) => ({
       );
       return { likedImages: updatedLikedImages };
     });
-  }
+  },
+  isImageLiked: (imageId: number) =>
+    get().likedImages.some((image: PixabayImage) => image.id === imageId)
 }));
 
 export const useImageSelectors = () => {
@@ -84,16 +87,11 @@ export const useImageSelectors = () => {
   const likedImageIds = useImagesStore((state) =>
     state.likedImages.map((image) => image.id)
   );
-  const isImageLiked = (imageId: number) =>
-    useImagesStore((state) =>
-      state.likedImages.some((image) => image.id === imageId)
-    );
   const getLikedImages = useImagesStore((state) => state.likedImages);
 
   return {
     getLikedImages,
     likedImagesCount,
-    likedImageIds,
-    isImageLiked
+    likedImageIds
   };
 };
