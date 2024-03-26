@@ -31,9 +31,7 @@ function LikeButton(
 }
 
 function UnlikeButton(
-  onUnlike: (
-    image: import('/home/davor/WebstormProjects/job/layer/src/common/types').PixabayImage
-  ) => void,
+  onUnlike: (image: PixabayImage) => void,
   image: PixabayImage
 ): React.ReactNode {
   return (
