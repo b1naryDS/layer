@@ -39,8 +39,8 @@ export const ImageWithHover: React.FC<
         />
       ) : (
         <picture>
-          {imageSrcSet.map(({ imgSrc, media }, index) => {
-            return <source key={index} media={media} srcSet={imgSrc} />;
+          {imageSrcSet.map(({ imgSrc, media }) => {
+            return <source key={imgSrc} media={media} srcSet={imgSrc} />;
           })}
           <img
             className="w-full h-full object-cover rounded-lg"
