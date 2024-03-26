@@ -5,6 +5,7 @@ deployed on vercel: https://layer-gamma.vercel.app
 breakpoints for imgs 180px, 340px, 640px
 debounce set to 400ms
 
+```
 src/
   ├── app/
   │   ├── Home/
@@ -45,4 +46,4 @@ src/
   ├── App.tsx
   ├── index.css
   └── main.tsx
-
+```
