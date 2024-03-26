@@ -24,6 +24,7 @@ src/
   ├── components/
   │   ├── icons/
   │   │   ├── expand-icon.tsx
+  │   │   ├── close-icon.tsx
   │   │   ├── like-icon.tsx
   │   │   ├── search-icon.tsx
   │   │   ├── home-icon.tsx
