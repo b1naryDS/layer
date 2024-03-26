@@ -22,7 +22,7 @@ export const ImageWithHover: React.FC<
 
   return (
     <div
-      className="inline"
+      className="inline-grid relative"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -33,12 +33,12 @@ export const ImageWithHover: React.FC<
             height: image.webformatHeight,
             width: image.webformatWidth
           }}
-          className="w-full  object-contain rounded-lg"
+          className="w-full object-contain rounded-lg"
           src={image.largeImageURL}
           alt={image.tags}
         />
       ) : (
-        <picture className="inline">
+        <picture>
           {imageSrcSet.map(({ imgSrc, media }, index) => {
             return <source key={index} media={media} srcSet={imgSrc} />;
           })}
