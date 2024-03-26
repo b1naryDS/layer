@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 import { PixabayImage, PixabayResponse } from '../common/types';
 
-const API_KEY = '26032813-5eca57a90774446a771ac3a81';
+//env
+const API_KEY = '26032813-5eca57a90774446a771ac3a81' ;
 const BASE_URL = 'https://pixabay.com/api/';
 const LIKED_IMAGES_KEY = 'likedImages';
 
@@ -44,7 +45,6 @@ export const useImagesStore = create<ImagesState>((set, get) => ({
         throw new Error('Failed to fetch images');
       }
       const data: PixabayResponse = await response.json();
-      console.log('data', data);
       set({ images: data.hits });
     } catch (error) {
       console.error('Error fetching images:', error);
