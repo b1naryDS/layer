@@ -4,7 +4,9 @@ export default function HomePageLink() {
   return (
     <a href="/">
       <div className="flex justify-center items-center">
-        <div className="relative py-2">{HomeIcon}</div>
+        <div className="relative py-2">
+          <HomeIcon />
+        </div>
       </div>
     </a>
   );
