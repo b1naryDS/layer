@@ -2,6 +2,8 @@ vite, react, typescript, tailwind, zustand, react-router
 
 deployed on vercel: https://layer-gamma.vercel.app
 
+breakpoints for imgs 180px, 340px, 640px
+
 src/
   ├── app/
   │   ├── Home/
