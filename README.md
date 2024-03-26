@@ -3,6 +3,7 @@ vite, react, typescript, tailwind, zustand, react-router
 deployed on vercel: https://layer-gamma.vercel.app
 
 breakpoints for imgs 180px, 340px, 640px
+debounce set to 400ms
 
 src/
   ├── app/
